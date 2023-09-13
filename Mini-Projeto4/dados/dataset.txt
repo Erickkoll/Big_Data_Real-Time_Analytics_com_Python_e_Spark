@@ -1,0 +1,22 @@
+id_veiculo,entrega,horario
+298,Entrega 1,7:58a
+298,Entrega 2,8:04a
+298,Entrega 3,8:17a
+298,Entrega 4,8:28a
+298,Entrega 5,8:33a
+298,Entrega 6,8:39a
+298,Entrega 7,9:07a
+315,Entrega 1,6:05a
+315,Entrega 2,6:14a
+315,Entrega 3,6:24a
+315,Entrega 4,6:38a
+315,Entrega 5,6:45a
+315,Entrega 6,6:56a
+315,Entrega 7,7:32a
+457,Entrega 1,5:04a
+457,Entrega 2,5:13a
+457,Entrega 3,5:27a
+457,Entrega 4,5:39a
+457,Entrega 5,5:47a
+457,Entrega 6,6:21a
+457,Entrega 7,6:38a

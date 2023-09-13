@@ -1,0 +1,10 @@
+# Mini-Projeto 7 - Criando os Containers Docker Para o Cluster Apache Kafka
+
+
+# Abra o prompt de comando ou terminal, navegue até a pasta onde estão os arquivos do projeto e execute o comando abaixo:
+
+docker-compose up -d
+
+# Para desligar o cluster Kafka execute:
+
+docker-compose down

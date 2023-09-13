@@ -1,0 +1,3 @@
+# Inicializa um container docker chamado "dsa" com SGBD PostgreSQL, user "postgres" e senha "dsa123".
+
+docker run --name dsa -e POSTGRES_PASSWORD=dsa123 -p 5432:5432 -d postgres

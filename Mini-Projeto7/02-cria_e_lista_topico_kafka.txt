@@ -1,0 +1,23 @@
+# Mini-Projeto 7 - Criando o Tópico Kafka
+
+
+# Acesse o container Kafka e execute os comandos abaixo para criar e depois visualizar um tópico no Kafka:
+
+bash
+
+cd /opt/kafka/bin
+
+# Cria um tópico
+kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor 1 --partitions 1 --topic dsaminiprojeto7
+
+
+# Lista os tópicos criados
+kafka-topics.sh --list --zookeeper zookeeper:2181
+
+
+# Detalhes sobre o tópico
+kafka-topics.sh --describe --zookeeper zookeeper:2181
+
+
+# Consome o Streaming
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic dsaminiprojeto7 --from-beginning

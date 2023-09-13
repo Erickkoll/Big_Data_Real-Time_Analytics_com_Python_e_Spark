@@ -1,0 +1,57 @@
+# Mini-Projeto 6 - Análise de Dados de Sensores IoT em Tempo Real com Apache Spark Streaming e Apache Kafka
+
+# Abaixo estão as instruções para executar o projeto.
+
+# Etapa 1 - Simulador IoT
+
+1- Abra o terminal ou prompt de comando e acesse a pasta com o simulador.
+
+2- Execute o comando abaixo para gerar um arquivo com 10.000 leituras de sensores IoT (pode gerar quantos registros você desejar).
+
+python simulador.py 1000 > ../dados/dados_sensores.txt
+
+
+# Etapa 2 - Apache Kafka
+
+1- Acesse a página do Kafka e faça o download da versão usada no curso conforme mostrado na aula em vídeo.
+
+2- Descompacte o arquivo do Kafka dentro da pasta do Mini-Projeto 6.
+
+Nota: As instruções abaixo são para MacOS e Linux. Para Windows as instruções estão no manual em pdf no Capítulo 15 do curso.
+
+3- Abra o terminal, navegue até a pasta do Kafka e execute o comando abaixo para inicializar o Zookeepper (gerenciador de cluster do Kafka).
+
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+4- Abra outro terminal, navegue até a pasta do Kafka e execute o comando abaixo para inicializar o Kafka.
+
+bin/kafka-server-start.sh config/server.properties
+
+5- Abra outro terminal, navegue até a pasta do Kafka e execute o comando abaixo para criar um tópico no Kafka.
+
+bin/kafka-topics.sh --create --topic dsamp6 --bootstrap-server localhost:9092
+
+6- No mesmo terminal anterior execute o comando abaixo para descrever o tópico.
+
+bin/kafka-topics.sh --describe --topic dsamp6 --bootstrap-server localhost:9092
+
+7- No mesmo terminal anterior execute o comando abaixo para produzir o streaming de dados no Kafka (como um produtor de streaming).
+
+bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic dsamp6 < ../dados/dados_sensores.txt
+
+8- No mesmo terminal anterior execute o comando abaixo para listar o conteúdo do tópico (como um consumidor de streaming).
+
+bin/kafka-console-consumer.sh --topic dsamp6 --from-beginning --bootstrap-server localhost:9092
+
+9- Pressione Ctrl+C a qualquer momento para interromper qualquer uma das janelas. Mantenha todas elas abertas enquanto executa a Etapa 3 do projeto.
+
+
+# Etapa 3 - Apache Spark
+
+1- Execute o jupyter notebook do projeto e execute célula a célula.
+
+
+
+
+
+
